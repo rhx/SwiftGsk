@@ -20,7 +20,7 @@ To build, download Swift from https://swift.org/download/ -- if you are using ma
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 5.6.0 (swift-5.6.0-RELEASE)
+	Swift version 5.6.1 (swift-5.6.1-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
 ### GLib 2.56 and Gsk 1.10 or higher
@@ -31,23 +31,23 @@ These Swift wrappers have been tested with glib-2.56, 2.58, 2.60, 2.62, 2.64, 2.
 
 ##### Ubuntu
 
-On Ubuntu 20.04 you can use the Gsk that comes with the distribution.  Just install with the `apt` package manager:
+On Ubuntu 22.04 you can use the gtk that comes with the distribution.  Just install with the `apt` package manager:
 
 	sudo apt update
-	sudo apt install libgsk-dev gir1.2-gsk-0.0 gobject-introspection libgirepository1.0-dev libxml2-dev
+	sudo apt install libgtk-3-dev gir1.2-gtk-3.0 gir1.2-gtksource-3.0 libcogl-dev gir1.2-cogl-1.0 libcogl-pango-dev gir1.2-coglpango-1.0 libgdk-pixbuf2.0-dev gir1.2-gdkpixbuf-2.0 libgirepository1.0-dev libxml2-dev
 
 ##### Fedora
 
-On Fedora 29, you can use the gtk that comes with the distribution.  Just install with the `dnf` package manager:
+On Fedora, you can use the gtk that comes with the distribution.  Just install with the `dnf` package manager:
 
-	sudo dnf install gsk-devel glib2-devel gobject-introspection-devel libxml2-devel
+	sudo dnf install gtk3-devel pango-devel cogl-devel gdk-pixbuf2-devel cairo-devel cairo-gobject-devel glib2-devel gobject-introspection-devel libxml2-devel
 
 #### macOS
 
-On macOS, you can install Gsk using HomeBrew (for setup instructions, see http://brew.sh).  Once you have a running HomeBrew installation, you can use it to install a native version of Gsk:
+On macOS, you can install gdk and gtk using HomeBrew (for setup instructions, see http://brew.sh).  Once you have a running HomeBrew installation, you can use it to install a native version of gtk:
 
 	brew update
-	brew install gsk glib glib-networking gobject-introspection pkg-config
+	brew install gtk4 glib glib-networking gobject-introspection pkg-config
 
 ## Usage
 
