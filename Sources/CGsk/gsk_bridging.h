@@ -1,6 +1,8 @@
 struct _GskBlendNode {};
 struct _GskBlurNode {};
 struct _GskBorderNode {};
+struct _GskBroadwayRenderer {};
+struct _GskBroadwayRendererClass {};
 struct _GskCairoNode {};
 struct _GskCairoRenderer {};
 struct _GskCairoRendererClass {};
@@ -41,6 +43,8 @@ typedef struct _GskNglRenderer GskNglRenderer;
 
 #include <sys/types.h>
 #include <gsk/gsk.h>
-
+#if __has_include(<gsk/broadway/gskbroadwayrenderer.h>)
+#include <gsk/broadway/gskbroadwayrenderer.h>
+#endif
 extern gpointer gsk_gl_renderer_new();
 extern GType gsk_gl_renderer_get_type();
