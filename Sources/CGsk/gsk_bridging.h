@@ -56,6 +56,7 @@ typedef struct _GskVulkanRenderer GskVulkanRenderer;
 typedef struct _GskVulkanRendererClass GskVulkanRendererClass;
 
 #include <sys/types.h>
+#include <stdint.h>
 #include <gsk/gsk.h>
 #if __has_include(<gsk/gl/gsknglrenderer.h>)
 #include <gsk/gl/gsknglrenderer.h>
