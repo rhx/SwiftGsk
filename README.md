@@ -3,9 +3,10 @@
 A Swift wrapper around gsk-1.x that is largely auto-generated from gobject-introspection.
 For up to date (auto-generated) reference documentation, see https://rhx.github.io/SwiftGsk/
 
-![macOS 12 build](https://github.com/rhx/SwiftGsk/workflows/macOS%2012/badge.svg)
-![Ubuntu 20.04 build](https://github.com/rhx/SwiftGsk/workflows/Ubuntu%2020.04/badge.svg)
-![Ubuntu 18.04 build](https://github.com/rhx/SwiftGsk/workflows/Ubuntu%2018.04/badge.svg)
+![macOS](https://github.com/rhx/SwiftGsk/actions/workflows/macOS.yml/badge.svg?branch=development)
+![Linux](https://github.com/rhx/SwiftGsk/actions/workflows/Linux.yml/badge.svg?branch=development)
+![macOS](https://github.com/rhx/SwiftGsk/actions/workflows/macOS.yml/badge.svg?branch=main)
+![Linux](https://github.com/rhx/SwiftGsk/actions/workflows/Linux.yml/badge.svg?branch=main)
 
 ## Prerequisites
 
