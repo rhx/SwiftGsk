@@ -43,6 +43,6 @@ let package = Package(
         ),
         .testTarget(
             name: "GskTests",
-            dependencies: ["Gsk"]),
+            dependencies: ["Gsk", "CGsk"]),
     ]
 )

@@ -1,6 +1,6 @@
 # SwiftGsk
 
-A Swift wrapper around gsk-1.x that is largely auto-generated from gobject-introspection.
+A Swift wrapper around GSK 4 that is largely auto-generated from gobject-introspection.
 For up to date (auto-generated) reference documentation, see https://rhx.github.io/SwiftGsk/
 
 ![macOS](https://github.com/rhx/SwiftGsk/actions/workflows/macOS.yml/badge.svg?branch=development)
@@ -13,33 +13,35 @@ For up to date (auto-generated) reference documentation, see https://rhx.github.
 To build, download Swift from https://swift.org/download/ -- if you are using macOS, make sure you have the command line tools installed as well).  Test that your compiler works using `swift --version`, which should give you something like
 
 	$ swift --version
-	swift-driver version: 1.127.15 Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-	Target: arm64-apple-macosx26.0
+	swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+	Target: arm64-apple-macosx27.2.0
 
 on macOS, or on Linux you should get something like:
 
 	$ swift --version
-	Swift version 6.1 (swift-6.1-RELEASE)
+	Swift version 6.3.3 (swift-6.3.3-RELEASE)
 	Target: x86_64-unknown-linux-gnu
 
-### GLib 2.56 and Gsk 1.10 or higher
+### GLib 2.56 and GTK/GSK 4.0 or higher
 
-These Swift wrappers have been tested with glib-2.56, 2.58, 2.60, 2.62, 2.64, 2.66, 2.68, 2.70, 2.72, 2.74, 2.76, 2.78, 2.80, and 2.86, as well as Gsk 1.10 to 4.22 and later.  They should work with higher versions, but YMMV.  Also make sure you have `gobject-introspection` and its `.gir` files installed.
+These Swift wrappers have been tested with GLib 2.56, 2.58, 2.60, 2.62, 2.64, 2.66, 2.68, 2.70, 2.72, 2.74, 2.76, 2.78, 2.80, 2.82, 2.84, 2.86, 2.88, and 2.90, and GTK/GSK 4.0, 4.2, 4.4, 4.6, 4.8, 4.10, 4.12, 4.14, 4.16, 4.18, 4.20, 4.22, and 4.24.  Later versions may also work.  Make sure you have `gobject-introspection` and its `.gir` files installed.
 
 #### Linux
 
 ##### Ubuntu
 
-On Ubuntu 22.04 and 24.04 you can use the gtk that comes with the distribution.  Just install with the `apt` package manager:
+On Ubuntu 22.04, 24.04, and 26.04, you can use the GTK package supplied by the distribution.  Install the development packages with `apt`:
 
 	sudo apt update
-	sudo apt install libgtk-3-dev gir1.2-gtk-3.0 gir1.2-gtksource-3.0 libcogl-dev gir1.2-cogl-1.0 libcogl-pango-dev gir1.2-coglpango-1.0 libgdk-pixbuf2.0-dev gir1.2-gdkpixbuf-2.0 libgirepository1.0-dev libxml2-dev
+	sudo apt install libgtk-4-dev libglib2.0-dev glib-networking libcairo2-dev libpango1.0-dev gir1.2-pango-1.0 libgdk-pixbuf-2.0-dev gir1.2-gdkpixbuf-2.0 libgraphene-1.0-dev gir1.2-graphene-1.0 libharfbuzz-dev gobject-introspection libgirepository1.0-dev libxml2-dev jq
+
+On Ubuntu 24.04 and earlier, install `libgdk-pixbuf2.0-dev` in place of `libgdk-pixbuf-2.0-dev`.
 
 ##### Fedora
 
-On Fedora, you can use the gtk that comes with the distribution.  Just install with the `dnf` package manager:
+On Fedora, you can use the GTK package supplied by the distribution.  Install the development packages with `dnf`:
 
-	sudo dnf install gtk3-devel pango-devel cogl-devel gdk-pixbuf2-devel cairo-devel cairo-gobject-devel glib2-devel gobject-introspection-devel libxml2-devel
+	sudo dnf install gtk4-devel graphene-devel pango-devel harfbuzz-devel gdk-pixbuf2-devel cairo-devel glib2-devel gobject-introspection-devel libxml2-devel jq
 
 #### macOS
 
