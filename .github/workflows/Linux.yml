@@ -6,9 +6,9 @@ env:
 
 on:
   push:
-    branches: [development, main]
+    branches: [development, main, gtk4]
   pull_request:
-    branches: [development, main]
+    branches: [development, main, gtk4]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
