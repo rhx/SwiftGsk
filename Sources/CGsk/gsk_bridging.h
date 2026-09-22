@@ -9,22 +9,29 @@ struct _GskCairoRendererClass {};
 struct _GskClipNode {};
 struct _GskColorMatrixNode {};
 struct _GskColorNode {};
+struct _GskComponentTransfer {};
+struct _GskComponentTransferNode {};
+struct _GskCompositeNode {};
 struct _GskConicGradientNode {};
 struct _GskContainerNode {};
+struct _GskCopyNode {};
 struct _GskCrossFadeNode {};
 struct _GskDebugNode {};
 struct _GskFillNode {};
 struct _GskGLShaderNode {};
 struct _GskInsetShadowNode {};
+struct _GskIsolationNode {};
 struct _GskLinearGradientNode {};
 struct _GskMaskNode {};
 struct _GskOpacityNode {};
 struct _GskOutsetShadowNode {};
+struct _GskPasteNode {};
 struct _GskPath {};
 struct _GskPathBuilder {};
 struct _GskPathMeasure {};
 struct _GskRadialGradientNode {};
 struct _GskRenderNode {};
+struct _GskRenderReplay {};
 struct _GskRenderer {};
 struct _GskRendererClass {};
 struct _GskRepeatNode {};
@@ -56,6 +63,7 @@ typedef struct _GskVulkanRenderer GskVulkanRenderer;
 typedef struct _GskVulkanRendererClass GskVulkanRendererClass;
 
 #include <sys/types.h>
+#include <stdint.h>
 #include <gsk/gsk.h>
 #if __has_include(<gsk/gl/gsknglrenderer.h>)
 #include <gsk/gl/gsknglrenderer.h>
